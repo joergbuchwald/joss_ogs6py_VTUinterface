@@ -82,7 +82,7 @@ ogs6py allows creating complete OGS configuration files from scratch, altering e
 The following example demonstrates some basic functionalities.
 The complete example demonstrating a common ogs6py/VTUinterface workflow on a coupled thermo-hydro-mechanical (THM) problem of a tunnel excavation followed by the
 emplacement of a heat-emitting canister can be found in a 
-[Jupyter notebook](https://github.com/joergbuchwald/joss_ogs6py_VTUinterface/blob/master/paper/paper_ogs6py_vtuio.ipynb) located in the project repository.
+[Jupyter notebook](https://github.com/joergbuchwald/joss_ogs6py_VTUinterface/blob/master/demo/paper_ogs6py_vtuio.ipynb) located in the project repository.
 
 
 To read in an existing project file and to specify an output name an instance of OGS needs to be created.
