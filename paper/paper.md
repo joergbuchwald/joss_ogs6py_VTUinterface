@@ -73,7 +73,7 @@ As standard output format, OpenGeoSys uses VTK unstructured grid files (VTU) as 
 These can be analyzed typically using Paraview [@ahrens2005paraview]. For interactive use the Python 
 wrapper for VTK [@schroeder2000visualizing] and some other tools like PyVista [@sullivan2019pyvista] or Mayavi [@ramachandran2011mayavi] 
 are available facilitating an easier access to the VTK library.
-While the direct use of the VTK library is quite cumbersome for basic tasks, like reading data for a given point set, especially when interpolation between grid points is also required. The latter packages focus mainly on 3D visualization. However, the _bread and butter_ business of a finite-element-modeler often consists of the extraction of single- or multiple point time-series data.
+While the direct use of the VTK library is quite cumbersome for basic tasks, like reading data for a given point set, especially when interpolation between grid points is also required, the latter packages focus mainly on 3D visualization. However, the _bread and butter_ business of a finite-element-modeler often consists of the extraction of single- or multiple point time-series data.
 To our knowledge the named packages (with the exception of Paraview) don't have file support for PVDs or time series data, yet [@pvdissue; @timeseriesissue].
 
 # Features
