@@ -36,7 +36,7 @@ bibliography: paper.bib
 
 # Summary
 
-We introduce two new Python modules that facilitate the pre- and post-processing of finite element calculations. [ogs6py](https://github.com/joergbuchwald/ogs6py) is a Python interface for the open-source package OpenGeoSys [@Bilke2019], a finite element code for simulation of multi-field processes in fractured porous media. Modeling workflows is further streamlined in Jupyter Notebooks using the newly developed [VTUinterface](https://github.com/joergbuchwald/VTUinterface).
+We introduce two new Python modules that facilitate the pre- and post-processing of finite element calculations. [ogs6py](https://github.com/joergbuchwald/ogs6py) is a Python interface for the open-source package OpenGeoSys [@Bilke2019], a finite element code for simulation of multi-field processes in fractured porous media. Modeling workflows can be further streamlined in Jupyter Notebooks using the newly developed [VTUinterface](https://github.com/joergbuchwald/VTUinterface).
 The usage of the modules is demonstrated with common workflow operations, including parameter variations, boundary conditions, solver settings, verification of simulation results by comparison to analytical solutions, set-up and evaluation of ensemble runs, convenient analysis of results by line plots, time series, or transient contour plots.
 
 # Statement of need
@@ -51,7 +51,7 @@ The standard output format of OpenGeoSys is VTK unstructured grid files (VTU) as
 # Features
 
 ogs6py allows creating complete OGS configuration files from scratch, altering existing files, running simulations and parsing OGS log files.
-The following example demonstrates some basic functionality The complete example demonstrating a typical ogs6py/VTUinterface workflow on a coupled thermo-hydro-mechanical (THM) problem of a tunnel excavation followed by the emplacement of a heat-emitting canister can be found in a 
+The following example demonstrates some basic functionalities. The complete example demonstrating a typical ogs6py/VTUinterface workflow on a coupled thermo-hydro-mechanical (THM) problem of a tunnel excavation followed by the emplacement of a heat-emitting canister can be found in a 
 [Jupyter notebook](https://github.com/joergbuchwald/joss_ogs6py_VTUinterface/blob/master/demo/paper_ogs6py_vtuio.ipynb) located in the project repository.
 
 
