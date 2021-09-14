@@ -119,7 +119,7 @@ This brief overview shows only some of the functionalities coming with ogs6py an
 
 # Technical Details
 
-ogs6py requires python 3.9 and uses [lxml](https://lxml.de/) to process OGS6 input files and uses the subprocess module to run OGS. Furthermore [pandas](https://pandas.pydata.org/) is required for holding OGS logfile data. VTUinterface requires python 3.8 and uses the python wrapper for [vtk](https://vtk.org/) to access VTU files and lxml for PVD files. In addition to vtk's own interpolation functionalities, we use pandas and scipy for interpolation.
+ogs6py requires python 3.9 and uses [lxml](https://lxml.de/) to process OGS6 input files and uses the subprocess module to run OGS. Furthermore, [pandas](https://pandas.pydata.org/) is required for holding OGS log file data. VTUinterface requires python 3.8 and uses the python wrapper for [vtk](https://vtk.org/) to access VTU files and lxml for PVD files. In addition to vtk's own interpolation functionalities, we use pandas and scipy for interpolation.
 
 # Applications
 
