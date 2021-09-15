@@ -46,7 +46,7 @@ While many existing open-source tools force the user to learn a new syntax for i
 
 In this contribution, we address interaction with the open-source code OpenGeoSys (OGS) [@Bilke2019] version 6, aiming to facilitate both pre-and post-processing workflows with Python. This aim was partly inspired by the desire to design, control and evaluate ensemble runs [@Buchwald2020;@Chaudhry2021] but has now taken on a wider perspective for general usability. A similar Python interface "ogs5py" exists for OGS version 5 [@muller2021ogs5py]; however, conceptual differences between the versions, for example, the use of XML input files, required an entirely new package to be built from scratch.
 
-The standard output format of OpenGeoSys is VTK unstructured grid files (VTU) as time slices stacked together by a PVD file. These can be analyzed using Paraview [@ahrens2005paraview], a Python wrapper for VTK [@schroeder2000visualizing], or visualization tools like PyVista [@sullivan2019pyvista] or Mayavi [@ramachandran2011mayavi]. However, a finite-element-modeller's _bread and butter_ business often include extracting single- or multiple point time-series data. The direct use of the VTK library is quite cumbersome for such tasks, especially when interpolation is required. The mentioned Python packages focus on visualization aspects, and except for Paraview, to our knowledge, the mentioned packages don't have file support for PVD files or time-series data[@pvdissue; @timeseriesissue].
+The standard output format of OpenGeoSys is VTK unstructured grid files (VTU) as time slices stacked together by a PVD file. These can be analyzed using Paraview [@ahrens2005paraview], a Python wrapper for VTK [@schroeder2000visualizing], or visualization tools like PyVista [@sullivan2019pyvista] or Mayavi [@ramachandran2011mayavi]. However, a finite-element-modeller's _bread and butter_ business often include extracting single- or multiple point time-series data. The direct use of the VTK library is quite cumbersome for such tasks, especially when interpolation is required. The mentioned Python packages focus on visualization aspects, and except for Paraview, to our knowledge, the mentioned packages do not have file support for PVD files or time-series data[@pvdissue; @timeseriesissue].
 
 # Features
 
@@ -123,7 +123,7 @@ ogs6py requires python 3.9 and uses [lxml](https://lxml.de/) to process OGS6 inp
 
 # Applications
 
-Both introduced packages are with 1-2 years of age relatively new. However, the adoption process in the OpenGeoSys community is gearing up. E.g., a [YouTube video](https://www.youtube.com/watch?v=eihNKjK-I-s) was published explaining their use; both tools are also used for teaching at the TU Bergakademie Freiberg and they were also extensively utilized in two recent peer-reviewed publications [@buchwald2021improved; @Buchwald2020].
+Both introduced packages are relatively new, being only 1 to 2 years old. However, the adoption process in the OpenGeoSys community is gearing up. E.g., a [YouTube video](https://www.youtube.com/watch?v=eihNKjK-I-s) was published explaining their use; both tools are also used for teaching at the TU Bergakademie Freiberg and they were also extensively utilized in two recent peer-reviewed publications [@buchwald2021improved; @Buchwald2020].
 
 # Acknowledgements
 
