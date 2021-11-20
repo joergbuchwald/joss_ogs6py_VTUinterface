@@ -36,7 +36,7 @@ bibliography: paper.bib
 
 # Summary
 
-We introduce two new Python modules that facilitate the pre- and post-processing of finite element calculations. [ogs6py](https://github.com/joergbuchwald/ogs6py) is a Python interface for the open-source package OpenGeoSys [@Bilke2019], a finite element code for simulation of multi-field processes in fractured porous media. Modeling workflows can be further streamlined in Jupyter Notebooks using the newly developed [VTUinterface](https://github.com/joergbuchwald/VTUinterface).
+We introduce two new Python modules that facilitate the pre- and post-processing of finite element calculations. [ogs6py](https://github.com/joergbuchwald/ogs6py) is a Python interface for the open-source package OpenGeoSys [@Bilke2019], a finite element code for simulation of multi-field processes in fractured porous media. Modeling workflows can be further streamlined in Jupyter Notebooks [@kluyver2016jupyter] using the newly developed [VTUinterface](https://github.com/joergbuchwald/VTUinterface).
 The use of the modules is demonstrated with common workflow operations, including parameter variations, setting boundary conditions, changing solver settings, verification of simulation results by comparison to analytical solutions, set-up and evaluation of ensemble runs, and convenient analysis of results by line plots, time series, or transient contour plots.
 
 # Statement of need
@@ -45,7 +45,7 @@ Python has become a widely used framework for scientific data analysis and model
 
 In this contribution, we address interaction with the open-source code OpenGeoSys (OGS) [@Bilke2019] version 6, aiming to facilitate both pre-and post-processing workflows with Python. This aim was partly inspired by the desire to design, control and evaluate ensemble runs [@Buchwald2020;@Chaudhry2021] but has now taken on a wider perspective for general usability. A similar Python interface "ogs5py" exists for OGS version 5 [@muller2021ogs5py]; however, conceptual differences between the versions, for example, the use of XML input files, required an entirely new package to be built from scratch.
 
-The standard output format of OpenGeoSys is VTK unstructured grid files (VTU) as time slices stacked together by a PVD file. These can be analyzed using Paraview [@ahrens2005paraview], a Python wrapper for VTK [@schroeder2000visualizing], or visualization tools like PyVista [@sullivan2019pyvista] or Mayavi [@ramachandran2011mayavi]. However, a finite-element-modeller's _bread and butter_ business often include extracting single- or multiple point time-series data. The direct use of the VTK library is quite cumbersome for such tasks, especially when interpolation is required. The mentioned Python packages focus on visualization aspects, and except for Paraview, to our knowledge, do not have file support for PVD files or time-series data [@pvdissue; @timeseriesissue].
+The standard output format of OpenGeoSys is VTK [@VTK] unstructured grid files (VTU) as time slices stacked together by a PVD file. These can be analyzed using Paraview [@ahrens2005paraview], a Python wrapper for VTK [@schroeder2000visualizing], or visualization tools like PyVista [@sullivan2019pyvista] or Mayavi [@ramachandran2011mayavi]. However, a finite-element-modeller's _bread and butter_ business often include extracting single- or multiple point time-series data. The direct use of the VTK library is quite cumbersome for such tasks, especially when interpolation is required. The mentioned Python packages focus on visualization aspects, and except for Paraview, to our knowledge, do not have file support for PVD files or time-series data [@pvdissue; @timeseriesissue].
 
 # Features
 
@@ -117,7 +117,7 @@ This brief overview shows only some of the functionalities coming with ogs6py an
 
 # Technical Details
 
-ogs6py requires python 3.8 or above and uses [lxml](https://lxml.de/) to process OGS6 input files and uses the subprocess module to run OGS. Furthermore, [pandas](https://pandas.pydata.org/) is required for holding OGS log file data. VTUinterface requires python 3.8 or above and uses the python wrapper for [vtk](https://vtk.org/) to access VTU files and lxml for PVD files. In addition to vtk's own interpolation functionalities, we use pandas and scipy for interpolation.
+ogs6py requires python 3.8 or above and uses [lxml](https://lxml.de/) [@behnel2005lxml] to process OGS6 input files and uses the subprocess module to run OGS. Furthermore, [pandas](https://pandas.pydata.org/) [@mckinney2010data] is required for holding OGS log file data. VTUinterface requires python 3.8 or above and uses the python wrapper for [VTK](https://vtk.org/) to access VTU files and lxml for PVD files. In addition to VTK's own interpolation functionalities, we use pandas and [SciPy](https://scipy.org/) [@virtanen2020scipy] for interpolation.
 
 # Applications
 
